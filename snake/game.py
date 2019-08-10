@@ -79,6 +79,18 @@ class GameConf:
         )
         self.info_status = ['eating', 'dead', 'full']
 
+    def readjust_UI(self):
+        self.info_str = (
+            "<w/a/s/d>: snake direction\n"
+            "<space>: pause/resume\n"
+            "<r>: restart    <esc>: exit\n"
+            "-----------------------------------\n"
+            "status: %s\n"
+            "episode: %d   step: %d\n"
+            "length: %d/%d (" + str(self.map_rows) + "x" + str(self.map_cols) + ")\n"
+            "-----------------------------------"
+        )
+
 class Game:
 
     def __init__(self, conf):
